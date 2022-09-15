@@ -7,5 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://simplylwe.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>100DaysOfCode</title>
+      <link>https://simplylwe.github.io/posts/miscellaneous/100days/</link>
+      <pubDate>Mon, 12 Sep 2022 07:20:15 -0700</pubDate>
+      
+      <guid>https://simplylwe.github.io/posts/miscellaneous/100days/</guid>
+      <description>Not too long ago I started the #100DaysOfCode challenge.
+It&amp;rsquo;s a challenge that invites people to code for one hour minimum every single day working on projects, whether that&amp;rsquo;s one big project, or several small projects. The challenge mostly provides developers motivation, community support, and accountability.
+I&amp;rsquo;m not a developer. I don&amp;rsquo;t ever plan to be. But I like coding. I like reading code. I like debugging and analyzing code. I like understanding code better.</description>
+    </item>
+    
   </channel>
 </rss>
