@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Getting Perspective - simplyLWE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://simplylwe.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.79794d372aa6d0ee7c548cd7d503960ed085e4fe6e9143c49fef9b12138fa75a.css">
+  
+
+  
+    <meta name="description" content="Getting perspective with pointers, memory addresses, and variables."/>
+    <meta property="og:title" content="Getting Perspective"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://simplylwe.github.io/posts/miscellaneous/perspectives/"/>
+    
+    <meta property="og:description" content="Getting perspective with pointers, memory addresses, and variables."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@simplyLWE"/>
+    <meta name="twitter:creator" content="@simplyLWE"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="menu-main-mobile" class="menu-main-mobile">
+    <ul class="menu">
+        
+        
+            
+                <li class="menu-item-categories">
+                    <a href="https://simplylwe.github.io/categories/">Categories</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-posts">
+                    <a href="https://simplylwe.github.io/posts/">Posts</a>
+                </li>
+            
+        
+    </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="https://simplylwe.github.io/">simplyLWE</a>
+  <div class="menu-main">
+    <ul>
+        
+        
+            <li class="menu-item-categories">
+                <a href="/categories/">Categories</a>
+            </li>
+        
+            <li class="menu-item-posts">
+                <a href="/posts/">Posts</a>
+            </li>
+        
+    </ul>
+  </div>
+  <div id="toggle-menu-main-mobile" class="hamburger-trigger">
+    <button class="hamburger">Menu</button>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>Getting Perspective<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <blockquote>
+<p>What is this all about?</p>
+</blockquote>
+<p>What is a variable, really?  Variables are one of the first concepts we&rsquo;re introduced to when we&rsquo;re learning to code.  But there is often a lot more to it than meets the eye.  And so we are going to take a deeper look at variables to get a better perspective of what is happening when we use them.</p>
+<h1 id="variables">Variables</h1>
+<p>When we declare variables, we usually do something like this: <code>int var = 7;</code></p>
+<p>First we specify the <strong>type</strong> of data<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, then we specify the <strong>name</strong> we want to call the variable, and finally we assign the <strong>value</strong> to the variable we want to store.</p>
+<p><img src="/images/miscellaneous/v.gif" alt="Vars"></p>
+<h1 id="memory">Memory</h1>
+<p>So what are we looking at here?  Well it turns out this whole thing, <code>int var = 7;</code> is really just a named object that happens to correspond to a block in memory at a particular address.  In other words, we can think of variables as a named memory location that stores a value of a specific type.</p>
+<p><img src="/images/miscellaneous/p1.jpeg" alt="Perspectives Image"></p>
+<h1 id="pointers">Pointers</h1>
+<p>So now we have a value of a specified type stored in a block of memory at a particular address.  But now the question is, how do we access this memory location?  The answer to that is a pointer.  A pointer simply stores a memory address.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>  We can think of a pointer as something that &ldquo;<em>points to</em>&rdquo; a particular block in memory.</p>
+<h2 id="example">Example</h2>
+<p>Using this example, <code>int var = 7;</code></p>
+<p>We first have to make a request to the operating system for a block of memory large enough to hold an integer<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, and we will initialize this integer to the value 7: <code>new int(7);</code></p>
+<p>Now we can create a pointer to point to that block in memory: <code>int* ptr = new int(7);</code></p>
+<p><img src="/images/miscellaneous/p2.jpeg" alt="Perspectives Image"></p>
+<p>But now the question remains, &ldquo;How do we actually <em><strong>go inside</strong></em> that block of memory to retrieve the value stored there?&rdquo;</p>
+<p>We can do this by &ldquo;<em><strong>dereferencing</strong></em>&rdquo; the pointer, like so: <code>*ptr</code></p>
+<p>This is just a fancy, perhaps more concise way for saying, &ldquo;go get the value stored at that memory address&rdquo;.</p>
+<p><img src="/images/miscellaneous/p3.jpeg" alt="Perspectives Image"></p>
+<p>For demonstration purposes, we can simply save the value from the dereferenced pointer into a variable: <code>int var = *ptr;</code></p>
+<p>And notice the two values are the same when we print them to the screen:</p>
+<p><img src="/images/miscellaneous/p4.jpeg" alt="Perspectives Image"></p>
+<p>So now we can say, <code>int var = 7;</code></p>
+<p>And this is exactly what we started with in the beginning.</p>
+<h3 id="sidenote">Sidenote</h3>
+<p>I know it seems circular to store the value of a dereferenced pointer into a variable.  We did, afterall, start this discussion talking about variables.  And even then, pointers themselves are also variables.  To be clear, the intent was <em>not</em> to show you how variables are implemented in the C and C++ languages.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>  But rather the intent behind this was to build up a picture and to create a better mental model for what is happening inside the machine.</p>
+<h1 id="the-end">The end.</h1>
+<p>In the end, when we declare a variable, the compiler allocates space for that variable in memory at a particular address.</p>
+<p>A variable is not a value, or something that holds a value, as we humans might think, not really at least.  But rather it is an abstraction and a convenient, human-friendly name for a memory location that stores a value of a specific type.</p>
+<p>I hope by now you are able to see things from a different perspective.  From the machine&rsquo;s perspective.</p>
+<h2 id="ps-one-last-note">P.S. One last note</h2>
+<p>You might be asking, why does any of this matter?  It matters because computers are deterministic machines.  And we humans tend to superimpose our bird&rsquo;s-eye-view on the problems we solve with code.  Computers do exactly what we tell them to do.  Flaws in our thinking consequently result in buggy code.<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>  While our code may still compile, run, and fill us with gratification, this is not to say the code is correct or the code produces the intended behavior.  Maybe it does provide the intended behavior, but maybe it also introduces unintended behaviors we are not aware of.</p>
+<p>So what&rsquo;s the key takeaway here?  Don&rsquo;t just write code, but write code <em><strong>well</strong></em>.  And how do we do that?  We think like the machine.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><em>Recall data can be categorized into different types.  For example, character types handle single ASCII and Unicode values, integer types handle whole numbers, floating-point types handle single-precision decimal values, double types handle double-precision decimal values, etc.</em>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><em>Recall memory addresses are represented in hexadecimal, a number system like any other.  Except hex (short for hexadecimal) represents digits using 16 symbols, rather than 10 we humans are so accustomed to.  Recall machines use the binary number system.  Although binary may be fundamentally simple, a long sequence of bits (ones and zeros) renders it hard to read for the human eye.  And so for this reason, binary values are encoded in hex (8 bits is equivalent to 1 byte; 4 bits translates to 1 hex digit; and so 8 bits, or 1 byte, translates to 2 hex digits).  And when we are looking at a series of 64-bits in memory, humans can more readily read 16 hex digits easier than 64 binary values, which would otherwise make your eyes cross.</em>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><em>Recall integer types require 4 bytes of memory.  (This is not always the case.  Storage sizes for different data types vary depending on the machine&rsquo;s architecture.  But this is generally a common storage size for integers.)  This is the reason why the offset for the memory address is 4.</em>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><em>In fact, this is <strong>not</strong> how they are implemented.  In this example, memory was requested from the heap, which occurs during runtime, whereas variables are allocated on the stack during compile time.</em>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p><em>There was once a literal bug in a machine.  Here is a fun short, read on the <a href="https://education.nationalgeographic.org/resource/worlds-first-computer-bug">&ldquo;World&rsquo;s First Computer Bug&rdquo;</a></em>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-twitter">
+        <a href="https://twitter.com/simplylwe" title="twitter" target="_blank" rel="noopener">
+          <img src="/images/social/twitter_white.svg" width="24" height="24" alt="twitter"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/simplylwe" title="github" target="_blank" rel="noopener">
+          <img src="/images/social/github_white.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-hackthebox">
+        <a href="https://www.hackthebox.com/" title="hackthebox" target="_blank" rel="noopener">
+          <img src="/images/social/hackthebox_white.svg" width="24" height="24" alt="hackthebox"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-tryhackme">
+        <a href="https://tryhackme.com/p/simplyLWE" title="tryhackme" target="_blank" rel="noopener">
+          <img src="/images/social/tryhackme_white.svg" width="24" height="24" alt="tryhackme"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/bundle.min.5993fcb11c07dea925a3fbd58c03c7f1857197c35fccce3aa963a12c0b3c9960.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>

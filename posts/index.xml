@@ -31,5 +31,27 @@ It&amp;rsquo;s a challenge that invites people to code for one hour minimum ever
 I&amp;rsquo;m not a developer. I don&amp;rsquo;t ever plan to be. But I like coding. I like reading code. I like debugging and analyzing code. I like understanding code better.</description>
     </item>
     
+    <item>
+      <title>Getting Perspective</title>
+      <link>https://simplylwe.github.io/posts/miscellaneous/perspectives/</link>
+      <pubDate>Tue, 06 Sep 2022 18:11:29 -0700</pubDate>
+      
+      <guid>https://simplylwe.github.io/posts/miscellaneous/perspectives/</guid>
+      <description>What is this all about?
+What is a variable, really? Variables are one of the first concepts we&amp;rsquo;re introduced to when we&amp;rsquo;re learning to code. But there is often a lot more to it than meets the eye. And so we are going to take a deeper look at variables to get a better perspective of what is happening when we use them.
+Variables When we declare variables, we usually do something like this: int var = 7;</description>
+    </item>
+    
+    <item>
+      <title>What is a Data Structure?</title>
+      <link>https://simplylwe.github.io/posts/data-structures/data-structures/</link>
+      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://simplylwe.github.io/posts/data-structures/data-structures/</guid>
+      <description>What is a data structure? Data structures are containers that hold things all of the same type.
+How are are they used? But what good is it to hold things we aren&amp;rsquo;t actually going to use in any meaningful way? That seems like a waste of space.
+So we use these containers, not simply to hold things, but to also organize things, perhaps process or do something with these things in some way, and even retrieve things.</description>
+    </item>
+    
   </channel>
 </rss>

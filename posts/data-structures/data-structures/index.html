@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>What is a Data Structure? - simplyLWE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://simplylwe.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.79794d372aa6d0ee7c548cd7d503960ed085e4fe6e9143c49fef9b12138fa75a.css">
+  
+
+  
+    
+    <meta property="og:title" content="What is a Data Structure?"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://simplylwe.github.io/posts/data-structures/data-structures/"/>
+    <meta property="og:image" content="https://simplylwe.github.io/images/data-structures/containers.jpeg"/>
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@simplyLWE"/>
+    <meta name="twitter:creator" content="@simplyLWE"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="menu-main-mobile" class="menu-main-mobile">
+    <ul class="menu">
+        
+        
+            
+                <li class="menu-item-categories">
+                    <a href="https://simplylwe.github.io/categories/">Categories</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-posts">
+                    <a href="https://simplylwe.github.io/posts/">Posts</a>
+                </li>
+            
+        
+    </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="https://simplylwe.github.io/">simplyLWE</a>
+  <div class="menu-main">
+    <ul>
+        
+        
+            <li class="menu-item-categories">
+                <a href="/categories/">Categories</a>
+            </li>
+        
+            <li class="menu-item-posts">
+                <a href="/posts/">Posts</a>
+            </li>
+        
+    </ul>
+  </div>
+  <div id="toggle-menu-main-mobile" class="hamburger-trigger">
+    <button class="hamburger">Menu</button>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>What is a Data Structure?<span class="dot">.</span></h1>
+      
+      <img src="/images/data-structures/containers.jpeg" />
+      
+    </div>
+    <div class="content">
+      <h1 id="what-is-a-data-structure">What is a data structure?</h1>
+<p>Data structures are containers that hold things all of the same type.</p>
+<h2 id="how-are-are-they-used">How are are they used?</h2>
+<p>But what good is it to hold things we aren&rsquo;t actually going to use in any meaningful way?  That seems like a waste of space.</p>
+<p>So we use these containers, not simply to hold things, but to also organize things, perhaps process or do something with these things in some way, and even retrieve things.</p>
+<p>Like we have different storage containers like tupperware, moving boxes, storage organizers, backpacks, etc. There are also different data structures, or different types of containers.</p>
+<p>Computers would be useless if all they did was store data.
+<em>There are two big questions that arise with data structures.</em></p>
+<ul>
+<li>How can we <strong>access</strong> individual elements?</li>
+<li>How can we organize, or <strong>sort</strong>, the individual elements?</li>
+</ul>
+<h3 id="considerations">Considerations</h3>
+<p>While all data structures can be used to solve the same problem, often there are tradeoffs to consider when deciding upon which data structure to use.  These tradeoffs scale between what we call <strong>time</strong> and <strong>space</strong> space complexity.</p>
+<p>Time complexity refers to the amount of time it takes to solve the problem; while space complexity refers to the amount of storage space that is required to solve the problem.</p>
+<p>And becuase we need to consider these factors of time and space complexity, the structure of particular data structures help us to determine the best use case for the data we are handling.</p>
+<h2 id="what-is-the-structure-of-a-data-structure">What is the structure of a data structure?</h2>
+<p>So in other words, data structures are simply a collection of things, and we have different types of data structures for different needs and purposes depending on what we plan on doing with these things, just like we have different containers to store and organize our things.  We have a dresser for storing clothes.  We have a tupperware for storing left over food.  We have a backpack for school supplies, or hiking gear.  And the structure of all these containers are all different from one another.</p>
+<p>Though we have different data structures, they can all be organized into <strong>linear</strong> and <strong>non-linear</strong> classifications based on their structure.</p>
+<p><img src="/images/data-structures/categories.jpeg" alt="Linear vs Nonlinear Image"></p>
+<p>For example, arrays, linked lists, stacks and queues are linear in their structure, whereas trees, hash tables, and graphs are non-linear in their structure.</p>
+<p>These are the fundamental and popular data structures you are likely to encounter.</p>
+<h3 id="linear">Linear</h3>
+<p>Elements in linear data structures are arranged one after another allow you to traverse through them in a single file line sort of fashion, whether that&rsquo;s up or down, forward or backward.  It&rsquo;s just pretty much a straight line.  For this reason, this makes them easier to implement compared to non-linear data strcutures. However, that being said, it does make the ability to access particular elements a bit more cumbersome. Since we have to traverse through the linear containers, the running cost</p>
+<p>For example if we need to traverse through a linear container to find <em>n</em>, we have to traverse through each element linearly, which means if <em>n</em> is the last element in the container, or perhaps not in the container at all then we have a linear runtime cost, O(n).</p>
+<p>So as we can see, as the size of the containers increase linearly, the runtime cost of the using these containers increases linearly.</p>
+<h3 id="nonlinear">Nonlinear</h3>
+<p>As we can see, they take on a hierarchical structure, which means we can cut the run time in half in generalized cases, if we know what we&rsquo;re looking for. However, because of this structure, this structures renders the implemnation a bit omre difficult to implement than a linear data structure.</p>
+<h2 id="what-are-we-going-to-do">What are we going to do?</h2>
+<p>It&rsquo;s important that we write our own implementations of data structures.  But why?  Many reasons.  It&rsquo;s a learning experience to help us better think more deeply about what is happening under the hood.  It helps us make better choices when choosing the appropriate data structure for our code.  And it helps us to better troubleshoot problems we encounter when using these data structures  &hellip; (thought to be continued) &hellip;</p>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-twitter">
+        <a href="https://twitter.com/simplylwe" title="twitter" target="_blank" rel="noopener">
+          <img src="/images/social/twitter_white.svg" width="24" height="24" alt="twitter"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/simplylwe" title="github" target="_blank" rel="noopener">
+          <img src="/images/social/github_white.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-hackthebox">
+        <a href="https://www.hackthebox.com/" title="hackthebox" target="_blank" rel="noopener">
+          <img src="/images/social/hackthebox_white.svg" width="24" height="24" alt="hackthebox"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-tryhackme">
+        <a href="https://tryhackme.com/p/simplyLWE" title="tryhackme" target="_blank" rel="noopener">
+          <img src="/images/social/tryhackme_white.svg" width="24" height="24" alt="tryhackme"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/bundle.min.5993fcb11c07dea925a3fbd58c03c7f1857197c35fccce3aa963a12c0b3c9960.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>

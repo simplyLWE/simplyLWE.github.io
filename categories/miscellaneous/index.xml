@@ -31,5 +31,16 @@ It&amp;rsquo;s a challenge that invites people to code for one hour minimum ever
 I&amp;rsquo;m not a developer. I don&amp;rsquo;t ever plan to be. But I like coding. I like reading code. I like debugging and analyzing code. I like understanding code better.</description>
     </item>
     
+    <item>
+      <title>Getting Perspective</title>
+      <link>https://simplylwe.github.io/posts/miscellaneous/perspectives/</link>
+      <pubDate>Tue, 06 Sep 2022 18:11:29 -0700</pubDate>
+      
+      <guid>https://simplylwe.github.io/posts/miscellaneous/perspectives/</guid>
+      <description>What is this all about?
+What is a variable, really? Variables are one of the first concepts we&amp;rsquo;re introduced to when we&amp;rsquo;re learning to code. But there is often a lot more to it than meets the eye. And so we are going to take a deeper look at variables to get a better perspective of what is happening when we use them.
+Variables When we declare variables, we usually do something like this: int var = 7;</description>
+    </item>
+    
   </channel>
 </rss>
