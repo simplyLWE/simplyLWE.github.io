@@ -8,30 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://simplylwe.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Getting Started</title>
-      <link>https://simplylwe.github.io/posts/miscellaneous/gettingstarted/</link>
-      <pubDate>Mon, 12 Sep 2022 08:05:03 -0700</pubDate>
-      
-      <guid>https://simplylwe.github.io/posts/miscellaneous/gettingstarted/</guid>
-      <description>The hardest the part of anything is getting started.
-Basic laws of physics.
-An object at rest will remain at rest.
-But once that momentum is &amp;ldquo;created&amp;rdquo;, energy is contagious.1
-Momentum isn&amp;rsquo;t really &amp;ldquo;created&amp;rdquo;, at least according to the laws of conservation.&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
-    </item>
-    
-    <item>
-      <title>100DaysOfCode</title>
-      <link>https://simplylwe.github.io/posts/miscellaneous/100days/</link>
-      <pubDate>Mon, 12 Sep 2022 07:20:15 -0700</pubDate>
-      
-      <guid>https://simplylwe.github.io/posts/miscellaneous/100days/</guid>
-      <description>Not too long ago I started the #100DaysOfCode challenge.
-It&amp;rsquo;s a challenge that invites people to code for one hour minimum every single day working on projects, whether that&amp;rsquo;s one big project, or several small projects. The challenge mostly provides developers motivation, community support, and accountability.
-I&amp;rsquo;m not a developer. I don&amp;rsquo;t ever plan to be. But I like coding. I like reading code. I like debugging and analyzing code. I like understanding code better.</description>
-    </item>
-    
-    <item>
       <title>Getting Perspective</title>
       <link>https://simplylwe.github.io/posts/miscellaneous/perspectives/</link>
       <pubDate>Tue, 06 Sep 2022 18:11:29 -0700</pubDate>
@@ -40,6 +16,30 @@ I&amp;rsquo;m not a developer. I don&amp;rsquo;t ever plan to be. But I like cod
       <description>What is this all about?
 What is a variable, really? Variables are one of the first concepts we&amp;rsquo;re introduced to when we&amp;rsquo;re learning to code. But there is often a lot more to it than meets the eye. And so we are going to take a deeper look at variables to get a better perspective of what is happening when we use them.
 Variables When we declare variables, we usually do something like this: int var = 7;</description>
+    </item>
+    
+    <item>
+      <title>100DaysOfCode</title>
+      <link>https://simplylwe.github.io/posts/miscellaneous/100days/</link>
+      <pubDate>Fri, 02 Sep 2022 07:20:15 -0700</pubDate>
+      
+      <guid>https://simplylwe.github.io/posts/miscellaneous/100days/</guid>
+      <description>Not too long ago I started the #100DaysOfCode challenge.
+It&amp;rsquo;s a challenge that invites people to code for one hour minimum every single day working on projects, whether that&amp;rsquo;s one big project, or several small projects. The challenge mostly provides developers motivation, community support, and accountability.
+I&amp;rsquo;m not a developer. I don&amp;rsquo;t ever plan to be. But I like coding. I like reading code. I like debugging and analyzing code. I like understanding code better.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://simplylwe.github.io/posts/miscellaneous/gettingstarted/</link>
+      <pubDate>Mon, 27 Jun 2022 08:05:03 -0700</pubDate>
+      
+      <guid>https://simplylwe.github.io/posts/miscellaneous/gettingstarted/</guid>
+      <description>The hardest the part of anything is getting started.
+Basic laws of physics.
+An object at rest will remain at rest.
+But once that momentum is &amp;ldquo;created&amp;rdquo;, energy is contagious.1
+Momentum isn&amp;rsquo;t really &amp;ldquo;created&amp;rdquo;, at least according to the laws of conservation.&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
     
   </channel>
