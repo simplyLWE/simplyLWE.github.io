@@ -42,16 +42,5 @@ What is a variable, really? Variables are one of the first concepts we&amp;rsquo
 Variables When we declare variables, we usually do something like this: int var = 7;</description>
     </item>
     
-    <item>
-      <title>What is a Data Structure?</title>
-      <link>https://simplylwe.github.io/posts/data-structures/data-structures/</link>
-      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://simplylwe.github.io/posts/data-structures/data-structures/</guid>
-      <description>What is a data structure? Data structures are containers that hold things all of the same type.
-How are are they used? But what good is it to hold things we aren&amp;rsquo;t actually going to use in any meaningful way? That seems like a waste of space.
-So we use these containers, not simply to hold things, but to also organize things, perhaps process or do something with these things in some way, and even retrieve things.</description>
-    </item>
-    
   </channel>
 </rss>
