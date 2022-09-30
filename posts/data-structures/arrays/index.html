@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Arrays - simplyLWE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://simplylwe.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.79794d372aa6d0ee7c548cd7d503960ed085e4fe6e9143c49fef9b12138fa75a.css">
+  
+
+  
+    <meta name="description" content="Arrays are more than just &#34;lists&#34;; they are static and dynamic."/>
+    <meta property="og:title" content="Arrays"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://simplylwe.github.io/posts/data-structures/arrays/"/>
+    
+    <meta property="og:description" content="Arrays are more than just &#34;lists&#34;; they are static and dynamic."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@simplyLWE"/>
+    <meta name="twitter:creator" content="@simplyLWE"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="menu-main-mobile" class="menu-main-mobile">
+    <ul class="menu">
+        
+        
+            
+                <li class="menu-item-categories">
+                    <a href="https://simplylwe.github.io/categories/">Categories</a>
+                </li>
+            
+        
+            
+                <li class="menu-item-posts">
+                    <a href="https://simplylwe.github.io/posts/">Posts</a>
+                </li>
+            
+        
+    </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="https://simplylwe.github.io/">simplyLWE</a>
+  <div class="menu-main">
+    <ul>
+        
+        
+            <li class="menu-item-categories">
+                <a href="/categories/">Categories</a>
+            </li>
+        
+            <li class="menu-item-posts">
+                <a href="/posts/">Posts</a>
+            </li>
+        
+    </ul>
+  </div>
+  <div id="toggle-menu-main-mobile" class="hamburger-trigger">
+    <button class="hamburger">Menu</button>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>Arrays<span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <p><em>The focus here is less on code semantics and more on ideas.</em></p>
+<blockquote>
+<p>Wait &hellip; why are we talking about variables, here?</p>
+</blockquote>
+<p>Arrays expand the concept of a single variable.  An array, in some sense, is a collection of individual variables.</p>
+<p>For example, assume we have 7 books.  If we want to contain each book, we have to declare an individual variable for each one of those 7 books.</p>
+<p>But what if we have more than 7 books?  Say we have 50, or 100, or some arbitrary number of books (we call <em>n</em>).  This is a very tedious, manual, and time-consuming process.  I don&rsquo;t know about you, but I don&rsquo;t want to sit here and manually declare <em>n</em> variables, when <em>n</em> is very large.</p>
+<p><img src="/images/data-structures/arrays/arrays.gif" alt="Books Image"></p>
+<p>So this is where arrays come in handy.  Instead of manually declaring variables one-by-one, we can simply declare the variable once as a &ldquo;collection of variables&rdquo; into an <strong>array</strong>.  And this array will contain all the individual books we want.</p>
+<h1 id="so-what-is-an-array">So what is an array?</h1>
+<p>Now that we have a better mental model, we can say more formally that an array is a type of data structure.  Recall data structures can be thought of as a simple container that stores data all of the same type.</p>
+<p>So then what makes arrays unique from other data structures?  Arrays contain individual elements consecutively, one right after the other.  You&rsquo;ll often hear people talk about arrays being contiguous in memory.  This just means the elements are stored in one block of memory back-to-back in a row.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p><img src="/images/data-structures/arrays/a.jpeg" alt="Books Image"></p>
+<h2 id="types-of-arrays">Types of arrays</h2>
+<p>Arrays can be categorized into two types: <strong>static arrays</strong> and <strong>dynamic arrays</strong>.  Recall arrays are stored contiguously in memory.  This is the fundamental feature of arrays that applies to both types.</p>
+<p>So what is the difference between the two types?  The difference is <em>where</em> they are stored in memory.  Static arrays are stack-allocated, whereas dynamic arrays are heap-allocated.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<h3 id="static">Static</h3>
+<p>Static arrays (which some people call fixed-length arrays) are allocated on the stack, and therefore they have a specified size that does not change.  In other words, the length of the array, or the number of elements it contains is fixed.  And because it&rsquo;s stack allocated, the compiler needs to know how many bytes of memory to allocate for the array.  Thereforefore when you declare an array, you must indicate the size of the array,<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> otherwise you can expect to see a compiler error.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<p>The key takeaway here is static arrays do not change size.  They don&rsquo;t shrink when you delete elements.  They can&rsquo;t grow, which limits you from adding elements.  They&rsquo;re static.  Once you declare it, it is what it is.  You get what you ask for.  End of story.</p>
+<h3 id="dynamic">Dynamic</h3>
+<p>Dynamic arrays, on the otherhand, are allocated on the heap.  They&rsquo;re dynamic in their behavior and have the ability to shrink when you delete elements and grow when you add elements.  Typically we refer to these as vectors or lists (depending on your language).</p>
+<p>You might be thinking, why use static arrays at all if dynamic arrays don&rsquo;t restrict you the way static arrays do?</p>
+<p>There are tradeoffs we need to consider:</p>
+<ul>
+<li>
+<p><input disabled="" type="checkbox"> If we want to add more elements to an already full array, what are we to do?  How does an array grow?  Well, first we have to create a brand new array with extra space for the new elements, then we have to copy the elements from the old array into the new array, and finally we can delete the old array.  That&rsquo;s a lot of work and a lot of memory if we&rsquo;re dealing with a large array, especially if we only want to add one more element.  For this reason, dynamic arrays are slower and consume more memory.  This leads me to my second point.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> Because we need to create a new, larger array, we have to ask the operating system for memory using either the <code>malloc()</code> function call or the <code>new</code> keyword.<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>  Therefore, it is vitally important we release memory back to the operating system when we are done with it, using the <code>free()</code> function call or the <code>delete</code> keyword, respectively.  Otherwise if we are not careful and we continue to request more and more memory without releasing memory we no longer use, we will eventually run out of heap memory and consequently crash the system, leak memory, and/or corrupt memory.  None of which is desireable.</p>
+</li>
+</ul>
+<h1 id="summary">Summary</h1>
+<p>So in summary, arrays are containers that simply store elements contiguously in one block of memory.</p>
+<p>Static arrays are stack-allocated and use a predetermined amount of memory that holds and maintains one fixed size.  They&rsquo;re simpler and faster than dynamic arrays.  Dynamic arrays, on the otherhand, are heap-allocated and have the ability to grow, shrink, and change as needed.  While dynamic arrays are useful, they can impact performance (if performance is the goal).  At the end of the day, there needs to be careful consideration between the two depending on usecase.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><em>For example, if we have an array containing integer types, i.e. <code>int arr[3];</code> then the second element will be stored at a memory address 4 bytes offset from the first element (since integer types require 4 bytes of memory storage, generally speaking).</em>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><em>You may be asking, what is the stack?  What is the heap?  Or what is the difference between the stack and heap?  If we think of memory as a giant pool divided into areas such as the deep end and the shallow end, we can loosely think of the heap as the deep end and the stack as the shallow end.  They&rsquo;re just different regions in memory.  I discuss this in more detail in another post.  It may be helpful to go read that first, and then come back to read the following sections.</em>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><em>I personally use the term &ldquo;length&rdquo; to refer to the number of elements I want when I&rsquo;m declaring the array, and I reserve &ldquo;size&rdquo; for the number of bytes.  This just creates a clear distinction in my mind between the two.  Although, I don&rsquo;t know how useful it is because when you use data structures from the Standard Template Library (STL), or data structures other people wrote, you have the ability to retrieve the container&rsquo;s size using the <code>size()</code> function, which is a common interface-convention among all data structures.</em>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><em>This is just the compiler telling you it can&rsquo;t compile your code into a runable program because something is wrong, and in this case, forgetting to specify the length, or the number of elements you want in the array.  The compiler uses this information to calculate the number of bytes to allocate in memory (based on how many elements you want and the type of elements).</em>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p><em>These are actually library calls, which may be a wrapper around the system call to the operating system.</em>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-twitter">
+        <a href="https://twitter.com/simplylwe" title="twitter" target="_blank" rel="noopener">
+          <img src="/images/social/twitter_white.svg" width="24" height="24" alt="twitter"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/simplylwe" title="github" target="_blank" rel="noopener">
+          <img src="/images/social/github_white.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-hackthebox">
+        <a href="https://www.hackthebox.com/" title="hackthebox" target="_blank" rel="noopener">
+          <img src="/images/social/hackthebox_white.svg" width="24" height="24" alt="hackthebox"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-tryhackme">
+        <a href="https://tryhackme.com/p/simplyLWE" title="tryhackme" target="_blank" rel="noopener">
+          <img src="/images/social/tryhackme_white.svg" width="24" height="24" alt="tryhackme"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/bundle.min.5993fcb11c07dea925a3fbd58c03c7f1857197c35fccce3aa963a12c0b3c9960.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>

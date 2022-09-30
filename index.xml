@@ -8,9 +8,22 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Sep 2022 18:11:29 -0700</lastBuildDate><atom:link href="https://simplylwe.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Arrays</title>
+      <link>https://simplylwe.github.io/posts/data-structures/arrays/</link>
+      <pubDate>Tue, 06 Sep 2022 18:11:29 -0700</pubDate>
+      
+      <guid>https://simplylwe.github.io/posts/data-structures/arrays/</guid>
+      <description>The focus here is less on code semantics and more on ideas.
+Wait &amp;hellip; why are we talking about variables, here?
+Arrays expand the concept of a single variable. An array, in some sense, is a collection of individual variables.
+For example, assume we have 7 books. If we want to contain each book, we have to declare an individual variable for each one of those 7 books.
+But what if we have more than 7 books?</description>
+    </item>
+    
+    <item>
       <title>Getting Perspective</title>
       <link>https://simplylwe.github.io/posts/miscellaneous/perspectives/</link>
-      <pubDate>Tue, 06 Sep 2022 18:11:29 -0700</pubDate>
+      <pubDate>Tue, 06 Sep 2022 08:48:32 -0700</pubDate>
       
       <guid>https://simplylwe.github.io/posts/miscellaneous/perspectives/</guid>
       <description>What is this all about?
